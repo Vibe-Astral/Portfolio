@@ -1,7 +1,40 @@
+ /* 
+open type(otf)
+true type(ttf)
+embedded open type;
+*/
+@font-face {
+  font-family: 'underDeterminationMono';
+  src: url('./Fonts/DeterminationMono.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'underDeterminationSans';
+  src: url('./Fonts/DeterminationSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'underFriendFore';
+  src: url('./Fonts/MonsterFriendFore.otf')format('opentype');
+  
+}
+@font-face {
+  font-family: 'underFriendBack';
+  src: url('./Fonts/MonsterFriendBack.otf')format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
   padding: 0%;
   margin: 0%;
-  color: black;
+  color: white;
+  
 }
 
 ::-webkit-scrollbar {
@@ -14,7 +47,7 @@
   height: 100vh;
   display: flex;
   z-index: -1;
-  background-image: url('../img/');
+  background-image: url('../img/737481.png');
   background-repeat: no-repeat;
   background-position: center;
   flex-direction: column;
@@ -63,32 +96,72 @@ nav ul li {
   height: 80%;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-
+.apres img{
+  width: 100px;
+}
 /* main */
 main {
   display: block;
   text-align: center;
-  background-color: rgb(246, 246, 246);
+  background-color: black;
 }
-
+main h1 {
+  font-family: 'underDeterminationSans';
+  padding-top: 40px;
+}
+main h1 a{
+  font-family: 'underFriendFore';
+}
 /* Section about */
 .content-about {
- 
   display: flex;
   width: 100%;
-  height: 100vh;
   text-align: center;
   flex-direction: column;
+  align-items: center;
+ 
 }
+.deter{
+  margin-top: 30px;
+  border: 2px solid white;
+  padding: 4px 4px 4px 4px ;
 
+}
+.deter h1{
+  padding: 5px;
+}
+#star{
+  width: 60px;
+  margin-top: 5%;
+}
+#friskw{
+  display: flex;
+  width: 50%;
+  margin-bottom: 20px;
+}
+#asriel{
+  width: 100px;
+  margin-top: 5%;
+  display: flex;
+}
 .about {
-  margin-top: 20%;
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: justify;
-  width: 50%;
-  margin-left: 25%;
+  align-items: center;
+  width: 70%;
+  border: 2px solid white;
+  padding: 4px 10px 4px 4px;
+
+  
+}
+.about p{
+  font-family: 'underDeterminationMono';
+  font-size: 20px;
+ 
 }
 
 /* Section portfolio */
@@ -105,7 +178,7 @@ main {
 .card {
   display: flex;
   background-color: aqua;
-  border: 2px solid black;
+  border: 2px solid white;
   justify-content: center;
 
 }
@@ -143,8 +216,16 @@ main {
 }
 
 footer {
+  background-color: black;
   display: flex;
   width: 100%;
   height: 30px;
   justify-content: center;
+}
+@media (max-width: 1115px)
+{
+  .about p{
+    font-family: 'underDeterminationMono';
+    font-size: 15px;
+  }
 }
